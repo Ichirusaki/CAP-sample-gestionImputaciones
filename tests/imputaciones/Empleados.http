@@ -1,0 +1,5 @@
+### Recuperar empleados
+GET http://localhost:4004/imputaciones/Empleados
+
+### Recuperar un empleado y sus imputaciones
+GET http://localhost:4004/imputaciones/Empleados('covid19')?$expand=imputaciones

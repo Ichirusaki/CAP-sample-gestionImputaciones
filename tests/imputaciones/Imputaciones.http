@@ -1,0 +1,79 @@
+### Recuperar imputaciones de un empleado en un dia en concreto
+GET http://localhost:4004/imputaciones/Imputaciones?$filter=empleado_usuario eq 'amoran' and fecha eq 2020-05-06
+
+### Crear una imputacion
+POST http://localhost:4004/imputaciones/Imputaciones
+Content-Type: application/json;IEEE754Compatible=true
+
+{
+    "fecha":"2020-01-01",
+    "horas":"4",
+    "observaciones":"Creando imputacion desde cliente HTTP",
+    "empleado_usuario":"covid19"
+}
+
+### Editar una imputacion
+PUT http://localhost:4004/imputaciones/Imputaciones(00000000-0000-0000-0000-000000000001)
+Content-Type: application/json;IEEE754Compatible=true
+
+{
+    "horas":"3.5"
+}
+
+### Borrar una imputacion
+DELETE http://localhost:4004/imputaciones/Imputaciones(00000000-0000-0000-0000-000000000001)
+
+### Para ver que ha funcionado la edicion o borrado de una imputacion
+GET http://localhost:4004/imputaciones/Imputaciones(00000000-0000-0000-0000-000000000001)
+
+
+### Crear una imputacion erronea - + de 24 horas
+POST http://localhost:4004/imputaciones/Imputaciones
+Content-Type: application/json;IEEE754Compatible=true
+
+{
+    "fecha":"2020-01-01",
+    "horas":"25",
+    "observaciones":"Creando imputacion desde cliente HTTP",
+    "empleado_usuario":"covid19"
+}
+### Crear una imputacion erronea - 0 horas
+POST http://localhost:4004/imputaciones/Imputaciones
+Content-Type: application/json;IEEE754Compatible=true
+
+{
+    "fecha":"2020-01-01",
+    "horas":"0",
+    "observaciones":"Creando imputacion desde cliente HTTP",
+    "empleado_usuario":"covid19"
+}
+
+### Crear una imputacion erronea - Horas negativas
+POST http://localhost:4004/imputaciones/Imputaciones
+Content-Type: application/json;IEEE754Compatible=true
+
+{
+    "fecha":"2020-01-01",
+    "horas":"-1",
+    "observaciones":"Creando imputacion desde cliente HTTP",
+    "empleado_usuario":"covid19"
+}
+
+### Crear una imputacion erronea - No multiplo de 0.5
+POST http://localhost:4004/imputaciones/Imputaciones
+Content-Type: application/json;IEEE754Compatible=true
+
+{
+    "fecha":"2020-01-01",
+    "horas":"4.3",
+    "observaciones":"Creando imputacion desde cliente HTTP",
+    "empleado_usuario":"covid19"
+}
+
+### Editar una imputacion erronea
+PUT http://localhost:4004/imputaciones/Imputaciones(00000000-0000-0000-0000-000000000001)
+Content-Type: application/json;IEEE754Compatible=true
+
+{
+    "horas":"-3.5"
+}

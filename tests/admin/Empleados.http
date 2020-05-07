@@ -1,0 +1,28 @@
+### Recuperar empleados
+GET http://localhost:4004/admin/Empleados
+
+### Recuperar un empleado, sus imputaciones y datos del pais
+GET http://localhost:4004/admin/Empleados('covid19')?$expand=imputaciones,pais
+
+
+### Crear un empleado
+POST http://localhost:4004/admin/Empleados
+Content-Type: application/json
+
+{
+    "usuario":"prueba",
+    "nombre":"Hola",
+    "apellidos":"Mundo",
+    "pais_code":"es"
+}
+
+### Editar un empleado
+PUT http://localhost:4004/admin/Empleados('prueba')
+Content-Type: application/json
+
+{
+    "pais_code":"ad"
+}
+
+### Borrar un empleado
+DELETE http://localhost:4004/admin/Empleados('prueba')

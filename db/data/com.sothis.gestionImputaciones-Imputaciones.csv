@@ -1,0 +1,4 @@
+ID;empleado_usuario;fecha;horas;observaciones;createdAt;createdBy;modifiedAt;modifiedBy
+00000000-0000-0000-0000-000000000001;amoran;2020-05-06;6.5;Imputacion de prueba;2020-05-06T11:45;amoran;2020-05-06T11:45;amoran
+00000000-0000-0000-0000-000000000002;amoran;2020-05-06;2;Otra imputacion de prueba;2020-05-06T11:50;amoran;2020-05-06T11:50;amoran
+00000000-0000-0000-0000-000000000003;covid19;2020-02-13;8.5;Infectando por España;2020-02-13T09:00;covid19;2020-05-06T12:00;covid19
